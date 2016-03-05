@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{430C974F-6F75-4144-9612-4CB1DF79928D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpineMonogameWin32</RootNamespace>
+    <AssemblyName>SpineMonogameWin32</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.4.0.459, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\windows8-store\example\packages\MonoGame.Framework.WindowsDX.3.4.0.459\lib\net40\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX, Version=3.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\windows8-store\example\packages\SharpDX.3.0.1\lib\net45\SharpDX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1, Version=3.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\windows8-store\example\packages\SharpDX.Direct2D1.3.0.1\lib\net45\SharpDX.Direct2D1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11, Version=3.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\windows8-store\example\packages\SharpDX.Direct3D11.3.0.1\lib\net45\SharpDX.Direct3D11.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.DXGI, Version=3.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\windows8-store\example\packages\SharpDX.DXGI.3.0.1\lib\net45\SharpDX.DXGI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.MediaFoundation, Version=3.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\windows8-store\example\packages\SharpDX.MediaFoundation.3.0.1\lib\net45\SharpDX.MediaFoundation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.XAudio2, Version=3.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\windows8-store\example\packages\SharpDX.XAudio2.3.0.1\lib\net45\SharpDX.XAudio2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.XInput, Version=3.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\windows8-store\example\packages\SharpDX.XInput.3.0.1\lib\net45\SharpDX.XInput.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\spine-csharp\src\Animation.cs">
+      <Link>spine-csharp\Animation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\AnimationState.cs">
+      <Link>spine-csharp\AnimationState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\AnimationStateData.cs">
+      <Link>spine-csharp\AnimationStateData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Atlas.cs">
+      <Link>spine-csharp\Atlas.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Attachments\AtlasAttachmentLoader.cs">
+      <Link>spine-csharp\Attachments\AtlasAttachmentLoader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Attachments\Attachment.cs">
+      <Link>spine-csharp\Attachments\Attachment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Attachments\AttachmentLoader.cs">
+      <Link>spine-csharp\Attachments\AttachmentLoader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Attachments\AttachmentType.cs">
+      <Link>spine-csharp\Attachments\AttachmentType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Attachments\BoundingBoxAttachment.cs">
+      <Link>spine-csharp\Attachments\BoundingBoxAttachment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Attachments\MeshAttachment.cs">
+      <Link>spine-csharp\Attachments\MeshAttachment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Attachments\RegionAttachment.cs">
+      <Link>spine-csharp\Attachments\RegionAttachment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Attachments\WeightedMeshAttachment.cs">
+      <Link>spine-csharp\Attachments\WeightedMeshAttachment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\BlendMode.cs">
+      <Link>spine-csharp\BlendMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Bone.cs">
+      <Link>spine-csharp\Bone.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\BoneData.cs">
+      <Link>spine-csharp\BoneData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Event.cs">
+      <Link>spine-csharp\Event.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\EventData.cs">
+      <Link>spine-csharp\EventData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\ExposedList.cs">
+      <Link>spine-csharp\ExposedList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\IkConstraint.cs">
+      <Link>spine-csharp\IkConstraint.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\IkConstraintData.cs">
+      <Link>spine-csharp\IkConstraintData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\IUpdatable.cs">
+      <Link>spine-csharp\IUpdatable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Json.cs">
+      <Link>spine-csharp\Json.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\MathUtils.cs">
+      <Link>spine-csharp\MathUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Skeleton.cs">
+      <Link>spine-csharp\Skeleton.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\SkeletonBinary.cs">
+      <Link>spine-csharp\SkeletonBinary.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\SkeletonBounds.cs">
+      <Link>spine-csharp\SkeletonBounds.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\SkeletonData.cs">
+      <Link>spine-csharp\SkeletonData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\SkeletonJson.cs">
+      <Link>spine-csharp\SkeletonJson.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Skin.cs">
+      <Link>spine-csharp\Skin.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\Slot.cs">
+      <Link>spine-csharp\Slot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\SlotData.cs">
+      <Link>spine-csharp\SlotData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\TransformConstraint.cs">
+      <Link>spine-csharp\TransformConstraint.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-csharp\src\TransformConstraintData.cs">
+      <Link>spine-csharp\TransformConstraintData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-xna\src\MeshBatcher.cs">
+      <Link>spine-xna\MeshBatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-xna\src\RegionBatcher.cs">
+      <Link>spine-xna\RegionBatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-xna\src\SkeletonMeshRenderer.cs">
+      <Link>spine-xna\SkeletonMeshRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-xna\src\SkeletonRegionRenderer.cs">
+      <Link>spine-xna\SkeletonRegionRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-xna\src\Util.cs">
+      <Link>spine-xna\Util.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\spine-xna\src\XnaTextureLoader.cs">
+      <Link>spine-xna\XnaTextureLoader.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

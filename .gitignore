@@ -94,3 +94,9 @@ spine-starling/spine-starling-example/bin
 spine-starling/spine-starling-example/lib/.spine-starling.swc.stamp
 
 spine-turbulenz/spine-js/spine.js
+/spine-monogame/win32/spine-monogame-example-win32/bin/Windows/Debug
+/spine-monogame/win32/spine-monogame-example-win32/obj/x86/Debug
+/spine-monogame/win32/SpineMonogameWin32/bin/Debug
+/spine-monogame/win32/SpineMonogameWin32/obj/Debug
+/spine-monogame/windows-uwp/example/obj/x86/Debug
+/spine-monogame/windows8-store/example/Backup
